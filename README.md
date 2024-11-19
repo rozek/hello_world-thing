@@ -6,7 +6,9 @@ This work demonstrates the development, installation and use of a custom "thing"
 
 > Nota bene: in contrast to the "things" provided by the "Modular-Things" project itself, this one has been developed for a [Pimoroni Tiny2040](https://shop.pimoroni.com/products/tiny-2040) board (simply because I just had one on my desk). Since it uses the built-in RGB LEDs of that board, you may have to adjust the LED output commands in the Arduino "Firmware" in order to make a thing for a different board.
 
-## Usage ##
+## Installation Usage ##
+
+Below are instructions for installation and use of the "hello_world" thing - skip what you have already done
 
 ## Firmware ##
 
@@ -74,14 +76,32 @@ export default class hello_world extends Thing {
 /**** API Documentation ****/
 
   public api = [{
-    name:  'setRGB',
-    args:  [
+    name: 'setRGB',
+    args: [
       'R: 0 to 1',
       'G: 0 to 1',
       'B: 0 to 1'
     ]
   }]
 }
+```
+
+## Application Example ##
+
+An "application" may be some JavaScript code entered into and run by the "Modular Things" web editor.
+
+> **Important**: as soon as you plan to use custom things, you can no longer use the original web environment found at [https://modular-things.com/](https://modular-things.com/) but must navigate your browser to [http://localhost:3000](http://localhost:3000) (assuming that you use the default port).
+
+Here is an example for an application using the "hello_world" thing:
+
+```javascript
+const BlinkDelay = 800 // LED toggle every BlinkDelay millisecond
+
+let Value = 0
+loop(async () => {
+    Value = (Value === 0 ? 0.1 : 0)
+    await LEDView.setRGB(0,0,Value)
+}, BlinkDelay)
 ```
 
 ## License ##
