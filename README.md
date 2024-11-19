@@ -30,6 +30,52 @@ Below are instructions for installation and use of the "hello_world" thing - ski
 3. Open a terminal window and navigate to the extracted directory
 4. run `npm install`
 
+#### Software Installation ####
+
+1. Open the terminal window and navigate to the extracted directory
+2. copy the "hello_world" directory and its contents into the `things` folder. In the end, `./things/hello_world` should have the following structure:
+```
+./things/hello_world/
+  circuit/
+    images/
+      layout.png
+      schematic.png
+      preview.png
+  firmware/
+    hello_world/
+      hello_world.ino
+  software/
+    hello_world.ts
+```
+3. Insert the following text into file `./things/_things.json` after the first line:
+```json
+  {
+    "author":  "Andreas Rozek",
+    "name":    "hello_world",
+    "software":"software/hello_world.ts",
+    "firmware":"firmware/hello_world/hello_world.ino",
+    "images": [
+      { 
+        "name": "layout", 
+        "src": "circuit/images/layout.png"
+      },
+      { 
+        "name": "schematic", 
+        "src": "circuit/images/schematic.png"
+      },
+      { 
+        "name": "preview", 
+        "src": "circuit/images/preview.png"
+      }
+    ]
+  },
+```
+12. Insert the following lines into the file `./index.ts`
+  * `import hello_world from "./hello_world/software/hello_world";`
+    e.g., as the last import statement
+  * `hello_world,` as the last line in the `export default {` block<br>&nbsp;<br>
+13. (Re)start the server
+    `npm run dev`
 
 
 
