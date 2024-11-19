@@ -78,8 +78,23 @@ Below are instructions for installation and use of the "hello_world" thing - ski
 13. (Re)start the server
     `npm run dev`
 
+#### Thing Usage ####
 
+1. Connect properly prepared the RP2040 board to your computer via USB.
+2. Open the (**custom**) web environment: [http://localhost:3000](http://localhost:3000)
+3. Click on "pair new thing" and select the "Thing" you conencted before<br>(the "List of Things" should then display a description of its interface).
+4. Click on "rename" and change the name of your Thing to "LEDView" (this is the name used within the application example).
+5. Copy the following example application into the web editor:<br>
+```javascript
+const BlinkDelay = 800 // LED toggle every BlinkDelay millisecond
 
+let Value = 0
+loop(async () => {
+    Value = (Value === 0 ? 0.1 : 0)
+    await LEDView.setRGB(0,0,Value)
+}, BlinkDelay)
+```
+6. Click on "run (shift + enter)"<br>(the LED on the RP2040 board should blink now).
 
 ## Firmware ##
 
