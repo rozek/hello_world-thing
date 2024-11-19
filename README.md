@@ -6,7 +6,7 @@ This work demonstrates the development, installation and use of a custom "thing"
 
 ![Multi-IO "Thing"](Multi-IO.jpg)
 
-> Nota bene: in contrast to the "things" provided by the "Modular-Things" project itself, this one has been developed for a [Pimoroni Tiny2040](https://shop.pimoroni.com/products/tiny-2040) board (simply because I just had one on my desk). Since it uses the built-in RGB LEDs of that board, you may have to adjust the LED output commands in the Arduino "Firmware" shown below in order to make a thing for a different board.
+> Nota bene: in contrast to the "things" provided by the "Modular Things" project itself, this one has been developed for a [Pimoroni Tiny2040](https://shop.pimoroni.com/products/tiny-2040) board (simply because I just had one on my desk). Since it uses the built-in RGB LEDs of that board, you may have to adjust the LED output commands in the Arduino "Firmware" shown below in order to make a thing for a different board.
 
 ## Installation and Usage ##
 
@@ -84,8 +84,8 @@ Below are instructions for installation and use of the "hello_world" thing - ski
 
 1. Connect the properly prepared RP2040 board to your computer via USB.
 2. Open the (**custom**) web environment: [http://localhost:3000](http://localhost:3000)
-3. Click on "pair new thing" and select the "Thing" you connected before<br>(the "List of Things" should now display a description of its interface).
-4. Click on "rename" and change the name of your Thing to "LEDView" (this is the name used within the application example).
+3. Click on "pair new thing" and select the "thing" you connected before<br>(the "List of Things" should now display a description of its interface).
+4. Click on "rename" and change the name of your thing to "LEDView" (this is the name used within the application example).
 5. Copy the following example application into the web editor:<br>
 ```javascript
 const BlinkDelay = 800 // LED toggle every BlinkDelay millisecond
@@ -100,7 +100,7 @@ loop(async () => {
 
 ## Firmware ##
 
-In the "Modular-Things" terminology, the "firmware" of a thing is an Arduino sketch which implements a thing's functionality on the hardware side. Here is the one for the "hello_world" thing:
+In the "Modular Things" terminology, the "firmware" of a thing is an Arduino sketch which implements a thing's functionality on the hardware side. Here is the one for the "hello_world" thing:
 
 ```c++
 #include <osap.h>
@@ -146,7 +146,7 @@ In the "Modular-Things" terminology, the "firmware" of a thing is an Arduino ske
 
 ## Software ##
 
-In the "Modular-Things" terminology, the "software" of a thing is its JavaScript interface (which may still include some additional functionality on the software side). Here is the one for the "hello_world" thing:
+In the "Modular Things" terminology, the "software" of a thing is its JavaScript interface (which may still include some additional functionality on the software side). Here is the one for the "hello_world" thing:
 
 ```typescript
 import Thing from "../../../src/lib/thing"
