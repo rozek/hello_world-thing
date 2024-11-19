@@ -77,7 +77,7 @@ Below are instructions for installation and use of the "hello_world" thing - ski
     e.g., as the last import statement
   * `hello_world,`<br>
     e.g., as the last line in the `export default {` block
-13. (Re)start the server
+13. (Re)start the server<br>
     `npm run dev`
 
 #### Thing Usage ####
