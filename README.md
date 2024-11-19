@@ -10,7 +10,7 @@ This work demonstrates the development, installation and use of a custom "thing"
 
 ## Firmware ##
 
-In the "Modular-Things" terminology, the "firmware" of a thing is an Arduino sketch.
+In the "Modular-Things" terminology, the "firmware" of a thing is an Arduino sketch which implements a thing's functionality on the hardware side. Here is the one for the "hello_world" thing:
 
 ```c++
 #include <osap.h>
@@ -56,7 +56,7 @@ In the "Modular-Things" terminology, the "firmware" of a thing is an Arduino ske
 
 ## Software ##
 
-In the "Modular-Things" terminology, the "software" of a thing is its JavaScript interface:
+In the "Modular-Things" terminology, the "software" of a thing is its JavaScript interface (which may still include some additional functonality on the software side). Here is the one for the "hello_world" thing:
 
 ```typescript
 import Thing from "../../../src/lib/thing"
