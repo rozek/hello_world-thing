@@ -82,7 +82,7 @@ Below are instructions for installation and use of the "hello_world" thing - ski
 
 1. Connect the properly prepared RP2040 board to your computer via USB.
 2. Open the (**custom**) web environment: [http://localhost:3000](http://localhost:3000)
-3. Click on "pair new thing" and select the "Thing" you conencted before<br>(the "List of Things" should then display a description of its interface).
+3. Click on "pair new thing" and select the "Thing" you connected before<br>(the "List of Things" should now display a description of its interface).
 4. Click on "rename" and change the name of your Thing to "LEDView" (this is the name used within the application example).
 5. Copy the following example application into the web editor:<br>
 ```javascript
