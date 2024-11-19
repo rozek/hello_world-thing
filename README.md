@@ -49,7 +49,7 @@ Below are instructions for installation and use of the "hello_world" thing - ski
   software/
     hello_world.ts
 ```
-3. Insert the following text into file `./things/_things.json` after the first line (i.e., the opening bracket):
+3. Insert the following text into file `./things/_things.json` after the first line (i.e., after the opening bracket):
 ```json
   {
     "author":  "Andreas Rozek",
