@@ -72,12 +72,12 @@ Below are instructions for installation and use of the "hello_world" thing - ski
     ]
   },
 ```
-12. Insert the following lines into file `./index.ts`
+4. Insert the following lines into file `./index.ts`
   * `import hello_world from "./hello_world/software/hello_world";`<br>
     e.g., as the last import statement
   * `hello_world,`<br>
     e.g., as the last line in the `export default {` block
-13. (Re)start the server<br>
+5. (Re)start the server<br>
     `npm run dev`
 
 #### Thing Usage ####
