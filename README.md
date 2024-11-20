@@ -88,12 +88,12 @@ Below are instructions for installation and use of the "hello_world" thing - ski
 4. Click on "rename" and change the name of your thing to "LEDView" (this is the name used within the application example).
 5. Copy the following example application into the web editor:<br>
 ```javascript
-const BlinkDelay = 800 // LED toggle every BlinkDelay millisecond
+const BlinkDelay = 800 // LED toggles every BlinkDelay milliseconds
 
 let Value = 0
 loop(async () => {
-    Value = (Value === 0 ? 0.1 : 0)
-    await LEDView.setRGB(0,0,Value)
+  Value = (Value === 0 ? 0.1 : 0)
+  await LEDView.setRGB(0,0,Value)
 }, BlinkDelay)
 ```
 6. Click on "run (shift + enter)"<br>(the LED on the RP2040 board should blink now).
