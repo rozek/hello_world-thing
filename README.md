@@ -35,7 +35,7 @@ Below are instructions for installation and use of the "hello_world" thing - ski
 #### Software Installation ####
 
 1. Open the terminal window and navigate to the extracted directory
-2. copy the "hello_world" directory from this repository and its contents into the `./things` folder. Delete the `firmware` folder for the wrong board and remove the board suffix from the name of the other. In the end, `./things/hello_world` should have the following structure (**you will not break anything if you use the wrong firmware but the "thing" will simply not work**):
+2. copy the "hello_world" directory from this repository and its contents into the `./things` folder. _Delete the `firmware` folder for the wrong board and remove the board suffix from the name of the other_. In the end, `./things/hello_world` should have the following structure (**you will not damage anything if you use the wrong firmware but the "thing" will simply not work**):
 ```
 ./things/hello_world/
   circuit/
