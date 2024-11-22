@@ -12,9 +12,9 @@
   Adafruit_NeoPixel builtin_LED(1, builtin_LED_Pin, NEO_GRB + NEO_KHZ800);
 
   void _setRGB (uint8_t* Data, size_t Length) {
-    int R = (Length < 1 ? 0 : Data[0]);
-    int G = (Length < 2 ? 0 : Data[1]);
-    int B = (Length < 3 ? 0 : Data[2]);
+    int R = (Length < 2 ? 0 : Data[1]);
+    int G = (Length < 4 ? 0 : Data[3]);
+    int B = (Length < 6 ? 0 : Data[5]);
 
     builtin_LED.setPixelColor(0,builtin_LED.Color(R,G,B));
     builtin_LED.show();
@@ -27,8 +27,7 @@
     osap.begin();
 
     builtin_LED.begin();
-    builtin_LED.clear();
-    builtin_LED.setBrightness(50);
+    builtin_LED.setPixelColor(0,builtin_LED.Color(0,16,0));
     builtin_LED.show();
   }
 
