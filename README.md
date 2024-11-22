@@ -35,7 +35,7 @@ Below are instructions for installation and use of the "hello_world" thing - ski
 #### Software Installation ####
 
 1. Open the terminal window and navigate to the extracted directory
-2. copy the "hello_world" directory from this repository and its contents into the `./things` folder. In the end, `./things/hello_world` should have the following structure:
+2. copy the "hello_world" directory from this repository and its contents into the `./things` folder. Ignore any any `firmware` folders which do not match your board and remove the board suffix from the name of the folder you choosed. In the end, `./things/hello_world` should have the following structure:
 ```
 ./things/hello_world/
   circuit/
@@ -98,9 +98,9 @@ loop(async () => {
 ```
 6. Click on "run (shift + enter)"<br>(the LED on the RP2040 board should blink now).
 
-## Firmware ##
+## Firmware (Board-specific) ##
 
-In the "Modular Things" terminology, the "firmware" of a thing is an Arduino sketch which implements a thing's functionality on the hardware side. Here is the one for the "hello_world" thing:
+In the "Modular Things" terminology, the "firmware" of a thing is an Arduino sketch which implements a thing's functionality on the hardware side. Here is the one for the "hello_world" thing based on a Tiny2040:
 
 ```c++
 #include <osap.h>
