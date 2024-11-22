@@ -35,7 +35,7 @@ Below are instructions for installation and use of the "hello_world" thing - ski
 #### Software Installation ####
 
 1. Open the terminal window and navigate to the extracted directory
-2. copy the "hello_world" directory from this repository and its contents into the `./things` folder. _Delete the `firmware` folder for the wrong board and remove the board suffix from the name of the other_. In the end, `./things/hello_world` should have the following structure (**you will not damage anything if you use the wrong firmware but the "thing" will simply not work**):
+2. copy the "hello_world" directory from this repository and its contents into the `./things` folder. Delete the `firmware` folder for the wrong board and remove the board suffix from the name of the other (**you will not damage anything if you use the wrong firmware but the "thing" will simply not work**). In the end, `./things/hello_world` should have the following structure:
 ```
 ./things/hello_world/
   circuit/
@@ -100,7 +100,7 @@ loop(async () => {
 
 ## Firmware (Board-specific) ##
 
-In the "Modular Things" terminology, the "firmware" of a thing is an Arduino sketch which implements a thing's functionality on the hardware side. Here is the one for the "hello_world" thing based on a Tiny2040:
+In the "Modular Things" terminology, the "firmware" of a thing is an Arduino sketch which implements a thing's functionality on the hardware side. Here is the one for the "hello_world" thing based on a Tiny2040 (please, use the contents of file [hello_world/circuit/firmware-RP2040-Zero/hello_world/hello_world.ino](hello_world/circuit/firmware-RP2040-Zero/hello_world/hello_world.ino) for a Waveshare RP2040-Zero board instead):
 
 ```c++
 #include <osap.h>
