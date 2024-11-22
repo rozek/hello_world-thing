@@ -21,7 +21,7 @@ Below are instructions for installation and use of the "hello_world" thing - ski
 #### Firmware Installation ####
 
 1. Create a new sketch and rename it to `hello_world`
-2. Copy the firmware shown below into the sketch editor using the clipboard
+2. Copy the firmware shown below (or the contents of file [hello_world/firmware-RP2040-Zero/hello_world/hello_world.ino](hello_world/firmware-RP2040-Zero/hello_world/hello_world.ino) if you have a Waveshare RP2040-Zero board) into the sketch editor using the clipboard
 3. Connect the RP2040 board via USB and select it from the board dropdown in the Arduino IDE
 4. Compile and upload the sketch
 
@@ -100,7 +100,7 @@ loop(async () => {
 
 ## Firmware (Board-specific) ##
 
-In the "Modular Things" terminology, the "firmware" of a thing is an Arduino sketch which implements a thing's functionality on the hardware side. Here is the one for the "hello_world" thing based on a Tiny2040 (please, use the contents of file [hello_world/firmware-RP2040-Zero/hello_world/hello_world.ino](hello_world/firmware-RP2040-Zero/hello_world/hello_world.ino) for a Waveshare RP2040-Zero board instead):
+In the "Modular Things" terminology, the "firmware" of a thing is an Arduino sketch which implements a thing's functionality on the hardware side. Here is the one for a "hello_world" thing based on a Tiny2040 (please, use the contents of file [hello_world/firmware-RP2040-Zero/hello_world/hello_world.ino](hello_world/firmware-RP2040-Zero/hello_world/hello_world.ino) for a Waveshare RP2040-Zero board instead):
 
 ```c++
 #include <osap.h>
