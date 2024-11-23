@@ -106,21 +106,25 @@ In the "Modular Things" terminology, the "firmware" of a thing is an Arduino ske
 
 ```c++
 #include <osap.h>
+#include <Adafruit_NeoPixel.h>
 
-#define PIN_LED_R 18
-#define PIN_LED_G 19
-#define PIN_LED_B 20
+#define builtin_LED_Pin 16
 
   OSAP_Runtime osap;
   OSAP_Gateway_USBSerial serLink(&Serial);
   OSAP_Port_DeviceNames namePort("hello_world");
 
-/**** RGB Control (RGB LED on Tiny2040 is "active low"!) ****/
+/**** RGB Control ****/
+
+  Adafruit_NeoPixel builtin_LED(1, builtin_LED_Pin, NEO_GRB + NEO_KHZ800);
 
   void _setRGB (uint8_t* Data, size_t Length) {
-    analogWrite(PIN_LED_R, 255-Data[0]);
-    analogWrite(PIN_LED_G, 255-Data[1]);
-    analogWrite(PIN_LED_B, 255-Data[2]);
+    int R = (Length < 2 ? 0 : Data[1]);
+    int G = (Length < 4 ? 0 : Data[3]);
+    int B = (Length < 6 ? 0 : Data[5]);
+
+    builtin_LED.setPixelColor(0,builtin_LED.Color(R,G,B));
+    builtin_LED.show();
   }
   OSAP_Port_Named setRGB("setRGB",_setRGB);
 
@@ -129,14 +133,9 @@ In the "Modular Things" terminology, the "firmware" of a thing is an Arduino ske
   void setup() {
     osap.begin();
 
-    analogWriteResolution(8);
-    pinMode(PIN_LED_R, OUTPUT);
-    pinMode(PIN_LED_G, OUTPUT);
-    pinMode(PIN_LED_B, OUTPUT);
-
-    analogWrite(PIN_LED_R,255);
-    analogWrite(PIN_LED_G,255);
-    analogWrite(PIN_LED_B,255);
+    builtin_LED.begin();
+    builtin_LED.setPixelColor(0,builtin_LED.Color(0,16,0));
+    builtin_LED.show();
   }
 
 /**** Operation ****/
